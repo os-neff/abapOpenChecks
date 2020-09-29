@@ -1,22 +1,22 @@
-CLASS zcl_aoc_check_31 DEFINITION
-  PUBLIC
-  INHERITING FROM zcl_aoc_super
-  CREATE PUBLIC .
+class ZCL_AOC_CHECK_31 definition
+  public
+  inheriting from ZCL_AOC_SUPER
+  create public .
 
-  PUBLIC SECTION.
+public section.
 
-    METHODS constructor .
+  methods CONSTRUCTOR .
 
-    METHODS check
-         REDEFINITION .
-    METHODS get_attributes
-         REDEFINITION .
-    METHODS if_ci_test~query_attributes
-         REDEFINITION .
-    METHODS put_attributes
-         REDEFINITION .
-    METHODS get_message_text
-         REDEFINITION .
+  methods CHECK
+    redefinition .
+  methods GET_ATTRIBUTES
+    redefinition .
+  methods GET_MESSAGE_TEXT
+    redefinition .
+  methods IF_CI_TEST~QUERY_ATTRIBUTES
+    redefinition .
+  methods PUT_ATTRIBUTES
+    redefinition .
   PROTECTED SECTION.
   PRIVATE SECTION.
 
@@ -136,7 +136,7 @@ CLASS ZCL_AOC_CHECK_31 IMPLEMENTATION.
 
   METHOD constructor.
 
-    DATA lt_slin_desc_t     TYPE STANDARD TABLE OF slin_desc_t WITH EMPTY KEY.
+    DATA lt_slin_desc_t     TYPE STANDARD TABLE OF slin_desc_t.
     DATA ls_slin_desc_t     TYPE slin_desc_t.
     DATA lv_code            TYPE sci_errc.
     DATA lv_scimessage_text TYPE ty_scimessage_text.
